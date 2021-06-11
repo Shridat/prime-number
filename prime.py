@@ -1,13 +1,14 @@
-n=int(input("Enter a number="))
-flag=1
-if(n==1):
-    print("1 is neighter prime nor composite number!")
-else:
-    for i in range(2,n):
-        if(n%i==0):
-            flag=0
-if flag:
-    print(str(n)+" is prime!!")
-else:
-    print(str(n)+" is not prime")
+l=int(input("Enter a lower interval="))
+u=int(input("Enter a upper interval="))
+
+print("Prime numbers between "+str(l)+"and "+str(u)+"is=")
+for num in range(l,u+1):
+    flag=1
+    if(num>1):
+        for i in range(2,num):
+            if(num%i)==0:
+                flag=0
+                break
+        if flag:
+            print(num)
 
